@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import * as assert from "assert";
+// import * as assert from "assert";
 import { useAsync } from "react-async-hook";
 import { TokenInfo } from "@solana/spl-token-registry";
 import { MintLayout } from "@solana/spl-token";
@@ -144,7 +144,7 @@ export function DexContextProvider(props: any) {
           mint.publicKey.equals(m.account.quoteMintAddress)
         )[0];
         //@ts-ignore
-        assert.ok(baseMintInfo && quoteMintInfo);
+        // assert.ok(baseMintInfo && quoteMintInfo);
         // @ts-ignore
         m.account._baseSplTokenDecimals = baseMintInfo.mintInfo.decimals;
         // @ts-ignore

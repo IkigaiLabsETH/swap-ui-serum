@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import * as assert from "assert";
+// import * as assert from "assert";
 import { useAsync } from "react-async-hook";
 import { Provider, BN } from "@project-serum/anchor";
 import { PublicKey, Account } from "@solana/web3.js";
@@ -117,7 +117,7 @@ export function useOwnedTokenAccount(
           if (token.amount !== tokenAccount.account.amount) {
             const index = _OWNED_TOKEN_ACCOUNTS_CACHE.indexOf(tokenAccount);
             //@ts-ignore
-            assert.ok(index >= 0);
+            // assert.ok(index >= 0);
             _OWNED_TOKEN_ACCOUNTS_CACHE[index].account = token;
             setRefresh((r) => r + 1);
           }
@@ -135,7 +135,7 @@ export function useOwnedTokenAccount(
               if (token.amount !== tokenAccount.account.amount) {
                 const index = _OWNED_TOKEN_ACCOUNTS_CACHE.indexOf(tokenAccount);
                 //@ts-ignore
-                assert.ok(index >= 0);
+                // assert.ok(index >= 0);
                 _OWNED_TOKEN_ACCOUNTS_CACHE[index].account = token;
                 setRefresh((r) => r + 1);
               }

@@ -1,4 +1,4 @@
-import * as assert from "assert";
+// import * as assert from "assert";
 import React, { useContext, useState, useEffect } from "react";
 import { useAsync } from "react-async-hook";
 import { PublicKey } from "@solana/web3.js";
@@ -88,7 +88,7 @@ export function SwapContextProvider(props: any) {
   const referral = props.referral;
 
   //@ts-ignore
-  assert.ok(slippage >= 0);
+  // assert.ok(slippage >= 0);
 
   useEffect(() => {
     if (!fair) {
