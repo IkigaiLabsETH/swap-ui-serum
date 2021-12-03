@@ -87,6 +87,7 @@ export function SwapContextProvider(props: any) {
   const fair = _useSwapFair(fromMint, toMint, fairOverride);
   const referral = props.referral;
 
+  //@ts-ignore
   assert.ok(slippage >= 0);
 
   useEffect(() => {

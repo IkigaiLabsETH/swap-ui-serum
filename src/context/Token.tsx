@@ -116,6 +116,7 @@ export function useOwnedTokenAccount(
           } as TokenAccount;
           if (token.amount !== tokenAccount.account.amount) {
             const index = _OWNED_TOKEN_ACCOUNTS_CACHE.indexOf(tokenAccount);
+            //@ts-ignore
             assert.ok(index >= 0);
             _OWNED_TOKEN_ACCOUNTS_CACHE[index].account = token;
             setRefresh((r) => r + 1);
@@ -133,6 +134,7 @@ export function useOwnedTokenAccount(
               const token = parseTokenAccountData(info.data);
               if (token.amount !== tokenAccount.account.amount) {
                 const index = _OWNED_TOKEN_ACCOUNTS_CACHE.indexOf(tokenAccount);
+                //@ts-ignore
                 assert.ok(index >= 0);
                 _OWNED_TOKEN_ACCOUNTS_CACHE[index].account = token;
                 setRefresh((r) => r + 1);
