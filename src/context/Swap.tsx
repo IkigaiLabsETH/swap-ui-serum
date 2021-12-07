@@ -22,7 +22,7 @@ import {
 } from "./TokenList";
 import { useOwnedTokenAccount } from "../context/Token";
 
-const DEFAULT_SLIPPAGE_PERCENT = 0.5;
+const DEFAULT_SLIPPAGE_PERCENT = 1;
 
 export type SwapContext = {
   // Mint being traded from. The user must own these tokens.
